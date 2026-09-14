@@ -1,0 +1,368 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f9f7;
+    color: #1f2933;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+/* =========================
+   HERO
+========================= */
+
+.review-hero {
+    min-height: 390px;
+
+    background:
+        linear-gradient(
+            rgba(10, 55, 29, 0.72),
+            rgba(10, 55, 29, 0.72)
+        ),
+        url("../Assets/agriculture-community.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 60px 8%;
+}
+
+.hero-content {
+    max-width: 750px;
+    color: white;
+}
+
+.subtitle {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hero-content h1 {
+    font-size: clamp(38px, 5vw, 60px);
+    line-height: 1.1;
+    margin: 15px 0;
+}
+
+.hero-content h1 span {
+    color: #91d49d;
+}
+
+.hero-content p {
+    font-size: 17px;
+    max-width: 650px;
+    margin: auto;
+    color: #e5eee7;
+}
+
+
+/* =========================
+   RATING SUMMARY
+========================= */
+
+.rating-section {
+    padding: 70px 8%;
+    background: white;
+}
+
+.rating-summary {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 70px;
+
+    align-items: center;
+}
+
+.rating-number {
+    text-align: center;
+}
+
+.rating-number strong {
+    font-size: 65px;
+    color: #176b38;
+    display: block;
+}
+
+.stars {
+    color: #f5a623;
+    letter-spacing: 3px;
+    font-size: 20px;
+}
+
+.rating-number p {
+    color: #6b7280;
+    margin-top: 8px;
+}
+
+
+/* Rating Bars */
+
+.rating-row {
+    display: grid;
+    grid-template-columns: 45px 1fr 45px;
+    align-items: center;
+    gap: 10px;
+
+    margin: 12px 0;
+
+    font-size: 14px;
+}
+
+.bar {
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bar span {
+    display: block;
+    height: 100%;
+    background: #176b38;
+    border-radius: 10px;
+}
+
+.rating-row small {
+    color: #6b7280;
+}
+
+
+/* =========================
+   REVIEWS
+========================= */
+
+.reviews-section {
+    padding: 80px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading span,
+.leave-content > span {
+    color: #176b38;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.section-heading h2 {
+    font-size: 35px;
+    margin: 8px 0;
+}
+
+.section-heading p {
+    color: #6b7280;
+}
+
+
+/* Review Grid */
+
+.review-grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+
+/* Review Card */
+
+.review-card {
+    background: white;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+
+    padding: 28px;
+
+    transition: 0.3s;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.review-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    background: #e7f4ea;
+    color: #176b38;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 800;
+}
+
+.user h3 {
+    font-size: 16px;
+}
+
+.user small {
+    color: #6b7280;
+}
+
+.review-text {
+    color: #4b5563;
+    font-size: 15px;
+    margin-bottom: 18px;
+}
+
+.review-date {
+    color: #176b38;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   LEAVE REVIEW
+========================= */
+
+.leave-review {
+    padding: 80px 8%;
+}
+
+.leave-content {
+    max-width: 1100px;
+    margin: auto;
+
+    padding: 55px;
+
+    background: #eaf5ec;
+    border-radius: 15px;
+
+    text-align: center;
+}
+
+.leave-content h2 {
+    font-size: 32px;
+    margin: 8px 0;
+}
+
+.leave-content p {
+    max-width: 600px;
+    margin: 0 auto 25px;
+
+    color: #5f6b62;
+}
+
+.review-btn {
+    display: inline-block;
+
+    background: #176b38;
+    color: white;
+
+    padding: 13px 25px;
+    border-radius: 7px;
+
+    font-weight: 600;
+}
+
+.review-btn:hover {
+    background: #0f4f29;
+}
+
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .navbar nav {
+        display: none;
+    }
+
+    .rating-summary {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .login-btn {
+        display: none;
+    }
+
+    .reviews-section,
+    .rating-section,
+    .leave-review {
+        padding: 60px 5%;
+    }
+
+    .review-top {
+        align-items: flex-start;
+        gap: 15px;
+        flex-direction: column;
+    }
+
+    .leave-content {
+        padding: 40px 25px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}

@@ -1,0 +1,667 @@
+/*=========================================
+GOOGLE FONT & RESET
+=========================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#ffffff;
+    color:#222;
+    overflow-x:hidden;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+
+
+.container{
+    width:1200px;
+    max-width:95%;
+    margin:auto;
+}
+
+/*=========================================
+TOP BAR
+=========================================*/
+
+.top-bar{
+    width:100%;
+    height:45px;
+    background-image: url(../pages/images/contact.jpg);
+    background-size: cover;
+    background-position: center;
+    color:#fff;
+    font-size:13px;
+    margin-top: 50px;
+}
+
+.top-bar h1{
+    color: #f1f1f1;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.top-bar p{
+    text-align: center;
+    color: #fff;
+    font-size: 600;
+}
+.top-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:45px;
+}
+
+.top-left{
+    display:flex;
+    gap:30px;
+    align-items:center;
+}
+
+.top-left span{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.top-left i{
+    color:#f6c453;
+    font-size:12px;
+}
+
+.top-right{
+    display:flex;
+}
+
+.top-right a{
+    width:45px;
+    height:45px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    transition:.3s;
+    border-radius:50%;
+    background:#d0ff01;
+}
+
+.top-right a:hover{
+    background:#2b7b48;
+}
+
+
+/*=========================================
+GENERAL SECTION
+=========================================*/
+
+section{
+    padding:100px 0;
+}
+
+button{
+    cursor:pointer;
+    font-family:'Poppins',sans-serif;
+}
+
+input,
+textarea{
+    font-family:'Poppins',sans-serif;
+    outline:none;
+}
+
+/*=========================================
+CONTACT SECTION
+=========================================*/
+
+.contact{
+    padding:120px 0;
+    background:#ffffff;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:58% 42%;
+    column-gap:70px;
+    align-items:flex-start;
+}
+
+/*=========================
+LEFT CARD
+=========================*/
+
+.contact-form{
+    background:#fff;
+    padding:45px;
+    border-radius:8px;
+    box-shadow:0 15px 45px rgba(0,0,0,.08);
+}
+
+.small-title{
+    display:block;
+    color:#6fa33f;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    margin-bottom:10px;
+}
+
+.contact-form h2{
+    font-size:44px;
+    font-weight:700;
+    color:#222;
+    margin-bottom:35px;
+}
+
+
+.contact-form form input,
+.contact-form form textarea{
+
+    width:100%;
+    border:none;
+    background:#f7f7f7;
+    padding:18px 20px;
+    margin-bottom:18px;
+    font-size:14px;
+    color:#555;
+    transition:.3s;
+}
+
+.contact-form form input:focus,
+.contact-form form textarea:focus{
+
+    background:#fff;
+    box-shadow:0 0 0 2px #4b8b43;
+}
+
+.row{
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+.contact-form textarea{
+
+    height:180px;
+    resize:none;
+}
+
+.contact-form button{
+
+    background:#4b9d54;
+    color:#fff;
+    border:none;
+    padding:16px 35px;
+    border-radius:5px;
+    font-size:15px;
+    font-weight:600;
+    transition:.35s;
+}
+
+.contact-form button:hover{
+
+    background:#2b6d38;
+}
+
+.contact-form button i{
+
+    margin-right:8px;
+}
+
+/*=========================
+RIGHT SIDE
+=========================*/
+
+.contact-info{
+    position:relative;
+    padding-top:30px;
+}
+
+.contact-info h2{
+
+    font-size:44px;
+    font-weight:700;
+    color:#222;
+    margin-bottom:18px;
+}
+
+.contact-info>p{
+
+    color:#777;
+    line-height:1.9;
+    margin-bottom:40px;
+}
+
+/*=========================
+INFO BOX
+=========================*/
+
+.single-info{
+
+    display:flex;
+    align-items:flex-start;
+    gap:22px;
+    margin-bottom:35px;
+}
+
+.circle{
+
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    font-size:20px;
+    flex-shrink:0;
+}
+
+.green{
+
+    background:#57b95d;
+}
+
+.yellow{
+
+    background:#efbf48;
+}
+
+.dark{
+
+    background:#184f37;
+}
+
+.single-info h4{
+
+    font-size:20px;
+    color:#222;
+    margin-bottom:6px;
+}
+
+.single-info span{
+
+    color:#777;
+    line-height:1.8;
+    display:block;
+}
+
+/*=========================
+WHEAT IMAGE
+=========================*/
+
+.wheat{
+
+    position:absolute;
+    width:250px;
+    right:-90px;
+    bottom:-70px;
+    pointer-events:none;
+}
+
+/*=========================
+FORM PLACEHOLDERS
+=========================*/
+
+input::placeholder,
+textarea::placeholder{
+
+    color:#999;
+}
+
+/*=========================
+INPUT HOVER
+=========================*/
+
+.contact-form input:hover,
+.contact-form textarea:hover{
+
+    background:#f1f1f1;
+}
+
+/*=========================
+SMALL EFFECT
+=========================*/
+
+.contact-form{
+
+    transition:.3s;
+}
+
+.contact-form:hover{
+
+    transform:translateY(-3px);
+    box-shadow:0 20px 60px rgba(0,0,0,.09);
+}
+
+
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+    background: var(--color-nature);
+    color: var(--color-surface);
+    padding-top: 70px;
+}
+
+.footer-container {
+    padding: 0 7% 60px;
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr);
+    gap: 60px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.footer-logo i {
+    color: var(--color-fresh);
+}
+
+.footer-brand p {
+    color: var(--color-border-strong);
+    max-width: 330px;
+    margin: 25px 0;
+    font-size: 14px;
+}
+
+.socials {
+    display: flex;
+    gap: 10px;
+}
+
+.socials a {
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: var(--radius-full);
+    color: var(--color-border-strong);
+    transition: 0.25s;
+}
+
+.socials a:hover {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-primary-foreground);
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-column h3,
+.footer-column h4 {
+    margin-bottom: 10px;
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+}
+
+.footer-column a {
+    color: var(--color-border-strong);
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.footer-column a:hover {
+    color: var(--color-fresh);
+}
+
+.newsletter p {
+    color: var(--color-border-strong);
+    font-size: 13px;
+}
+
+.newsletter form {
+    display: flex;
+    gap: 8px;
+    margin-top: 6px;
+}
+
+.newsletter input {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 14px;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--color-surface);
+    font-size: 13px;
+}
+
+.newsletter input::placeholder {
+    color: var(--color-border-strong);
+}
+
+.newsletter button {
+    padding: 10px 16px;
+    border-radius: var(--radius-md);
+    border: none;
+    background: var(--color-primary);
+    color: var(--color-primary-foreground);
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.newsletter button:hover {
+    background: color-mix(in srgb, var(--color-primary), black 15%);
+}
+
+.footer-bottom {
+    padding: 20px 7%;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-text-disabled);
+    font-size: 12px;
+}
+
+.footer-bottom a {
+    color: var(--color-text-disabled);
+}
+
+.footer-bottom a:hover {
+    color: var(--color-fresh);
+}
+
+
+
+/*=========================================
+RESPONSIVE
+=========================================*/
+
+@media(max-width:1200px){
+
+.container{
+    width:95%;
+}
+
+.footer-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.contact-grid{
+    grid-template-columns:1fr;
+    gap:60px;
+}
+
+.wheat{
+    display:none;
+}
+
+}
+
+@media(max-width:992px){
+
+nav{
+    display:none;
+}
+
+.hero{
+    height:280px;
+}
+
+.hero-overlay h1{
+    font-size:40px;
+}
+
+.contact-form,
+.contact-info{
+    padding:20px;
+}
+
+.contact-form h2,
+.contact-info h2{
+    font-size:34px;
+}
+
+.footer-grid{
+    grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media(max-width:768px){
+
+.top-container{
+    flex-direction:column;
+    justify-content:center;
+    gap:8px;
+    height:auto;
+    padding:10px 0;
+}
+
+.top-left{
+    flex-direction:column;
+    gap:8px;
+}
+
+.row{
+    grid-template-columns:1fr;
+}
+
+.contact-grid{
+    grid-template-columns:1fr;
+}
+
+.contact-form{
+    padding:30px;
+}
+
+.footer-grid{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+.footer-column h3::after{
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.newsletter{
+    flex-direction:column;
+    height:auto;
+    gap:15px;
+}
+
+.newsletter input{
+    border-radius:30px;
+    height:50px;
+}
+
+.newsletter button{
+    width:100%;
+    border-radius:30px;
+    height:50px;
+}
+
+.post{
+    justify-content:center;
+    text-align:left;
+}
+
+.footer-contact{
+    justify-content:center;
+}
+
+.copyright-area{
+    flex-direction:column;
+    gap:15px;
+    text-align:center;
+}
+
+}
+
+@media(max-width:576px){
+
+.hero-overlay h1{
+    font-size:32px;
+}
+
+.hero-overlay p{
+    font-size:14px;
+}
+
+.contact-form h2,
+.contact-info h2{
+    font-size:28px;
+}
+
+.single-info{
+    flex-direction:column;
+    text-align:center;
+    align-items:center;
+}
+
+.footer-links{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.post{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+
+.post img{
+    width:120px;
+    height:120px;
+}
+
+.footer-contact{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+
+}

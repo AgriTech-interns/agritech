@@ -1,0 +1,556 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-5);
+    line-height: var( --leading-tight);
+    font-size: var(--text-md);
+    font-weight: var(--font-semibold);
+    border: transparent;
+    outline: none;
+    border-radius: var(--radius-lg);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    background-color: var(--color-surface-4);
+}
+
+.navbar-actions a{
+    text-decoration: none;
+}
+.btn-primary{
+    background: var(--color-primary);
+    color: var(--color-primary-foreground);
+}
+.btn-primary a{
+    text-decoration: none;
+    color: var(--color-primary-foreground);
+}
+.btn-secondary{
+    background: var(--color-secondary);
+    color: var( --color-secondary-foreground);
+}
+.btn-secondary a{
+    text-decoration: none;
+    color: var( --color-secondary-foreground);
+}
+.btn-primary-outline{
+    background: transparent;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+}
+.btn-secondary-outline{
+    background: transparent;
+    border: 1px solid var(--color-secondary);
+    color: var(--color-secondary);
+}
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+/*INPUT DESIGN */
+
+.input{
+    padding: var(--space-2) var(--space-3);
+    border: 1px solid var(--color-border);
+    background: var(--color-input);
+    outline: none;
+    border-radius: var(--radius-lg);
+    width: 100%;
+    max-width: 30vw;
+    color: var(--color-earth-dark);
+}
+.input.error{
+    border: 1px solid var(--color-error);
+    background: rgba(255, 0, 0, 0.199);
+    color: var(--color-error);
+}
+.input:active, .input:focus{
+    border: 1px solid var(--color-primary);
+    box-shadow: var(--shadow-focus);
+}
+
+/* NAVIGATION BAR */
+.navbar-container{
+    width: 100%;
+    height: auto;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--color-surface);
+}
+.navbar{
+    width: 100%;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-4) var(--space-4);
+    border-bottom: 1px solid var(--color-border);
+     position: fixed;
+     z-index: 50;
+      background: var(--color-surface);
+}
+.navbar-logo{
+    text-decoration: none;
+    font-size: var(--text-2xl);
+    color: var(--color-brand);
+    font-family: sans-serif;
+    font-weight: var(--font-bold);
+}
+.navbar-logo span{
+    color: var(--color-secondary);
+}
+.navbar-actions{
+    display: flex;
+    gap: var(--space-4);
+}
+.navbar-nav{
+    display: flex;
+    align-items: center;
+    gap: var(--space-10);
+}
+.nav-item{
+    list-style: none;
+    position: relative;
+}
+.nav-link{
+    text-decoration: none;
+    color: var(--color-foreground);
+    font-size: var(--text-md);
+    font-family: sans-serif;
+    font-weight: var(--font-meduim);
+    position: relative;
+}
+.nav-item::after{
+    position: absolute;
+    width: 0;
+    height: 2px;
+    content: "";
+    border-radius: var(--radius-lg);
+    background: var(--color-primary);
+    left: 0;
+    bottom: -25px;
+    transition: 0.3s ease-in-out;
+}
+.nav-item:hover::after{
+    width: 100%;
+}
+.nav-item.active::after{
+    width: 100%;
+}
+
+
+/* HAMBURGER BUTTON */
+.hamburger{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 60;
+}
+.hamburger span{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--color-foreground);
+    border-radius: var(--radius-full);
+    transition: 0.3s ease-in-out;
+}
+.hamburger.active span:nth-child(1){
+    transform: translateY(7px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2){
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3){
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Duplicate action buttons shown only inside the mobile slide-in menu */
+.navbar-actions-mobile{
+    display: none;
+    gap: var(--space-4);
+    margin-top: var(--space-6);
+}
+
+body.no-scroll{
+    overflow: hidden;
+}
+
+/* TABLET (LANDSCAPE) */
+@media (max-width: 1024px){
+    .navbar-nav{
+        gap: var(--space-6);
+    }
+}
+
+/* TABLET (PORTRAIT) + MOBILE */
+@media (max-width: 768px){
+    .navbar{
+        padding: var(--space-3) var(--space-4);
+    }
+
+    .hamburger{
+        display: flex;
+    }
+
+    .navbar-actions{
+        display: none;
+    }
+
+    .navbar-nav{
+        position: fixed;
+        top: 65px;
+        right: -100%;
+        width: 70%;
+        max-width: 320px;
+        height: calc(100vh - 65px);
+        background: var(--color-surface);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-8);
+        padding: var(--space-8) var(--space-6);
+        box-shadow: var(--shadow-xl);
+        transition: right 0.35s ease-in-out;
+        overflow-y: auto;
+        z-index: 55;
+    }
+
+    .navbar-nav.open{
+        right: 0;
+    }
+
+    .navbar-actions-mobile{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-actions-mobile .btn{
+        width: 100%;
+    }
+
+    .nav-item::after{
+        display: none;
+    }
+
+    .nav-item.active .nav-link,
+    .nav-link:hover{
+        color: var(--color-primary);
+    }
+}
+
+/* SMALL PHONES (iPhone SE etc.) */
+@media (max-width: 375px){
+    .navbar-logo{
+        font-size: var(--text-xl);
+    }
+
+    .navbar-nav{
+        width: 85%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER DESIGN */
+
+/* =========================
+   FOOTER
+========================= */
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+    background: var(--color-nature);
+    color: var(--color-surface);
+    padding-top: 70px;
+}
+
+.footer-container {
+    padding: 0 7% 60px;
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr);
+    gap: 60px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.footer-logo i {
+    color: var(--color-fresh);
+}
+
+.footer-brand p {
+    color: var(--color-border-strong);
+    max-width: 330px;
+    margin: 25px 0;
+    font-size: 14px;
+}
+
+.socials {
+    display: flex;
+    gap: 10px;
+}
+
+.socials a {
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: var(--radius-full);
+    color: var(--color-border-strong);
+    transition: 0.25s;
+}
+
+.socials a:hover {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-primary-foreground);
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-column h3,
+.footer-column h4 {
+    margin-bottom: 10px;
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+}
+
+.footer-column a {
+    color: var(--color-border-strong);
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.footer-column a:hover {
+    color: var(--color-fresh);
+}
+
+.newsletter p {
+    color: var(--color-border-strong);
+    font-size: 13px;
+}
+
+.newsletter form {
+    display: flex;
+    gap: 8px;
+    margin-top: 6px;
+}
+
+.newsletter input {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 14px;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--color-surface);
+    font-size: 13px;
+}
+
+.newsletter input::placeholder {
+    color: var(--color-border-strong);
+}
+
+.newsletter button {
+    padding: 10px 16px;
+    border-radius: var(--radius-md);
+    border: none;
+    background: var(--color-primary);
+    color: var(--color-primary-foreground);
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.newsletter button:hover {
+    background: color-mix(in srgb, var(--color-primary), black 15%);
+}
+
+.footer-bottom {
+    padding: 20px 7%;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-text-disabled);
+    font-size: 12px;
+}
+
+.footer-bottom a {
+    color: var(--color-text-disabled);
+}
+
+.footer-bottom a:hover {
+    color: var(--color-fresh);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .expert-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    .announcement {
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .nav-actions .search-button,
+    .login-link {
+        display: none;
+    }
+
+    .hero {
+        min-height: 620px;
+    }
+
+    .intro,
+    .knowledge {
+        grid-template-columns: 1fr;
+    }
+
+    .knowledge {
+        margin: 0 20px;
+    }
+
+    .intro-image {
+        min-height: 400px;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .final-cta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 1000px) {
+
+    .footer-container {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .footer-container {
+
+        grid-template-columns: 1fr;
+
+        padding: 40px 25px;
+
+    }
+
+    .footer-bottom {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+
+        padding: 20px;
+
+    }
+
+    .newsletter form {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+    }
+
+    .newsletter input {
+
+        border-radius: 6px;
+
+    }
+
+    .newsletter button {
+
+        border-radius: 6px;
+
+    }
+
+}
